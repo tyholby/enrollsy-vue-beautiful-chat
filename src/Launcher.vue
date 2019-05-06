@@ -57,11 +57,11 @@ export default {
     },
     title: {
       type: String,
-      default: () => ''
+      default: ''
     },
     titleImageUrl: {
       type: String,
-      default: () => ''
+      default: ''
     },
     onMessageWasSent: {
       type: Function,
@@ -73,15 +73,15 @@ export default {
     },
     newMessagesCount: {
       type: Number,
-      default: () => 0
+      default: 0
     },
     placeholder: {
       type: String,
-      default: 'Write a reply'
+      default: 'Write a message'
     },
     showTypingIndicator: {
       type: String,
-      default: () => ''
+      default: ''
     },
     loading: {
       type: Boolean,
@@ -133,11 +133,11 @@ export default {
     },
     alwaysScrollToBottom: {
       type: Boolean,
-      default: () => false
+      default: false
     },
     messageStyling: {
       type: Boolean,
-      default: () => false
+      default: false
     }
   },
   computed: {
