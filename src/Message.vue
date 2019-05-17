@@ -103,16 +103,16 @@ export default {
   display: none;
 }
 
-.sc-message--avatar {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  min-width: 30px;
-  min-height: 30px;
-  border-radius: 50%;
-  align-self: center;
-  margin-right: 15px;
-}
+/*.sc-message--avatar {*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: 100%;*/
+/*  background-position: center;*/
+/*  min-width: 30px;*/
+/*  min-height: 30px;*/
+/*  border-radius: 50%;*/
+/*  align-self: center;*/
+/*  margin-right: 15px;*/
+/*}*/
 
 .sc-message--meta {
   font-size: xx-small;
@@ -133,7 +133,6 @@ export default {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
-  white-space: pre-wrap;
   -webkit-font-smoothing: subpixel-antialiased
 }
 .sc-message--content.sent .sc-message--text {
