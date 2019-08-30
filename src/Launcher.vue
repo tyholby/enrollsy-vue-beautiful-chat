@@ -15,6 +15,7 @@
       :titleImageUrl="titleImageUrl"
       :isOpen="isOpen"
       :onClose="close"
+      :openHelpDrawer="openHelpDrawer"
       :showEmoji="showEmoji"
       :showFile="showFile"
       :placeholder="placeholder"
@@ -40,6 +41,10 @@ export default {
       required: true
     },
     open: {
+      type: Function,
+      required: true
+    },
+    openHelpDrawer: {
       type: Function,
       required: true
     },
@@ -91,7 +96,7 @@ export default {
     colors: {
       type: Object,
       required: false,
-      validator: c => 
+      validator: c =>
         'header' in c
         && 'bg' in c.header && 'text' in c.header
         && 'launcher' in c
