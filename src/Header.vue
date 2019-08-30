@@ -3,7 +3,7 @@
     <!--<img class="sc-header&#45;&#45;img" :src="imageUrl" alt="" v-if="imageUrl" />-->
     <div class="sc-header-users-text-container">
       <div class="sc-header--title" @click="toggleUserList"> {{title}} </div>
-      <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ 1 }} locations</div>
+      <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ numberOfLocations }} locations</div>
     </div>
     <div class="sc-header--close-button" @click="onClose">
       <img src="./assets/close-icon.png" alt="" />
@@ -27,6 +27,10 @@ export default {
     },
     openHelpDrawer: {
       type: Function,
+      required: true
+    },
+    numberOfLocations: {
+      type: Number,
       required: true
     },
     colors: {

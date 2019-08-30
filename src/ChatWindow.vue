@@ -6,6 +6,7 @@
       :onClose="onClose"
       :colors="colors"
       :openHelpDrawer="openHelpDrawer"
+      :numberOfLocations="numberOfLocations"
       @userList="handleUserListToggle"
     />
     <UserList
@@ -77,6 +78,10 @@ export default {
     },
     openHelpDrawer: {
       type: Function,
+      required: true
+    },
+    numberOfLocations: {
+      type: Number,
       required: true
     },
     messageList: {

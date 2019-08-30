@@ -16,6 +16,7 @@
       :isOpen="isOpen"
       :onClose="close"
       :openHelpDrawer="openHelpDrawer"
+      :numberOfLocations="numberOfLocations"
       :showEmoji="showEmoji"
       :showFile="showFile"
       :placeholder="placeholder"
@@ -46,6 +47,10 @@ export default {
     },
     openHelpDrawer: {
       type: Function,
+      required: true
+    },
+    numberOfLocations: {
+      type: Number,
       required: true
     },
     close: {
