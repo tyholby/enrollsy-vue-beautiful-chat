@@ -108,6 +108,7 @@ export default {
 .sc-open-drawer-text:hover {
   color: white;
   font-size: 12px;
+  cursor: pointer;
   text-decoration: underline;
 }
 
