@@ -57,6 +57,7 @@ export default {
   position: relative;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
 }
 
 .sc-header--img {
@@ -67,7 +68,6 @@ export default {
 
 .sc-header--title {
   align-self: center;
-  padding: 10px;
   flex: 1;
   user-select: none;
   cursor: pointer;
@@ -101,15 +101,20 @@ export default {
 
 .sc-open-drawer-text {
   color: #0097ff;
+  font-size: 12px;
+  text-decoration: underline;
 }
 
 .sc-open-drawer-text:hover {
+  color: white;
+  font-size: 12px;
   text-decoration: underline;
 }
 
 .sc-header-users-text-container {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 @media (max-width: 450px) {
