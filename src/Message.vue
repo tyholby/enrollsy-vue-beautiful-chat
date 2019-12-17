@@ -114,13 +114,6 @@ export default {
 /*  margin-right: 15px;*/
 /*}*/
 
-.sc-message--meta {
-  font-size: 10px;
-  margin-bottom: 0px;
-  color: white;
-  text-align: center;
-}
-
 @media (max-width: 450px) {
   .sc-message {
     width: 80%;
