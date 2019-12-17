@@ -15,6 +15,8 @@
       :titleImageUrl="titleImageUrl"
       :isOpen="isOpen"
       :onClose="close"
+      :openHelpDrawer="openHelpDrawer"
+      :numberOfLocations="numberOfLocations"
       :showEmoji="showEmoji"
       :showFile="showFile"
       :placeholder="placeholder"
@@ -41,6 +43,14 @@ export default {
     },
     open: {
       type: Function,
+      required: true
+    },
+    openHelpDrawer: {
+      type: Function,
+      required: true
+    },
+    numberOfLocations: {
+      type: Number,
       required: true
     },
     close: {
@@ -91,7 +101,7 @@ export default {
     colors: {
       type: Object,
       required: false,
-      validator: c => 
+      validator: c =>
         'header' in c
         && 'bg' in c.header && 'text' in c.header
         && 'launcher' in c

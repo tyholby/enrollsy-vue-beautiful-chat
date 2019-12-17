@@ -10,6 +10,7 @@
       :isOpen="isChatOpen"
       :close="closeChat"
       :open="openChat"
+      :openHelpDrawer="() => console.log('opened drawer')"
       :showEmoji="true"
       :showFile="true"
       :showTypingIndicator="showTypingIndicator"
@@ -27,9 +28,9 @@
         <a :style="{background: availableColors.red.launcher.bg}" href="#" @click.prevent="setColor('red')">Red</a>
         <a :style="{background: availableColors.green.launcher.bg}" href="#" @click.prevent="setColor('green')">Green</a>
         <a :style="{background: availableColors.dark.launcher.bg}" href="#" @click.prevent="setColor('dark')">Dark</a>
-      </p> 
+      </p>
       <v-dialog />
-      <p class="text-center messageStyling"><label>Message styling enabled? <input type="checkbox" @change="messageStylingToggled" checked></label><a href="#" @click.prevent="showStylingInfo()">info</a></p>  
+      <p class="text-center messageStyling"><label>Message styling enabled? <input type="checkbox" @change="messageStylingToggled" checked></label><a href="#" @click.prevent="showStylingInfo()">info</a></p>
     <TestArea :onMessage="sendMessage" :onTyping="handleTyping" :colors="colors" :chosenColor="chosenColor" :messageStyling="messageStyling" />
     <Footer :colors="colors" :chosenColor="chosenColor" />
   </div>

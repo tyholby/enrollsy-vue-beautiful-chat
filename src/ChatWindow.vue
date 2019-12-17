@@ -5,9 +5,11 @@
       :imageUrl="titleImageUrl"
       :onClose="onClose"
       :colors="colors"
+      :openHelpDrawer="openHelpDrawer"
+      :numberOfLocations="numberOfLocations"
       @userList="handleUserListToggle"
     />
-    <UserList 
+    <UserList
       v-if="showUserList"
       :participants="participants"
     />
@@ -72,6 +74,14 @@ export default {
     },
     onClose: {
       type: Function,
+      required: true
+    },
+    openHelpDrawer: {
+      type: Function,
+      required: true
+    },
+    numberOfLocations: {
+      type: Number,
       required: true
     },
     messageList: {
