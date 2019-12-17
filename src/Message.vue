@@ -115,7 +115,7 @@ export default {
 /*}*/
 
 .sc-message--meta {
-  font-size: xx-small;
+  font-size: 10px;
   margin-bottom: 0px;
   color: white;
   text-align: center;

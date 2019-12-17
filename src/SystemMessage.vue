@@ -1,5 +1,7 @@
 <template>
-  <div class="sc-message--system" :style="messageColors">{{data.text}}<p v-if="data.meta" class='sc-message--meta' :style="{color: messageColors.color}">{{data.meta}}</p>
+  <div class="sc-message--system" :style="messageColors">
+    {{data.text}}
+    <p v-if="data.meta" class='sc-message--meta' :style="{color: messageColors.color}">{{data.meta}}</p>
   </div>
 </template>
 
@@ -32,7 +34,7 @@ export default {
 }
 
 .sc-message--meta {
-  font-size: xx-small;
+  font-size: 10px;
   margin-bottom: 0px;
   margin-top: 5px;
   opacity: .5;
