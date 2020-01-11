@@ -177,7 +177,7 @@ export default {
   .sc-chat-window {
     width: 100%;
     height: 100%;
-    max-height: 100%;
+    max-height: 75vh;
     right: 0px;
     bottom: 0px;
     border-radius: 0px;

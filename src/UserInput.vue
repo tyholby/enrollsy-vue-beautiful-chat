@@ -21,7 +21,6 @@
       >
       </div>
       <div class="sc-user-input--buttons">
-        <div class="sc-user-input--button"></div>
         <div v-if="showEmoji" class="sc-user-input--button">
           <EmojiIcon :onEmojiPicked="_handleEmojiPicked" :color="colors.userInput.text" />
         </div>
@@ -157,13 +156,13 @@ export default {
 }
 
 .sc-user-input--text {
-  width: 300px;
+  flex: 75;
+  padding: 18px 18px 40px 18px;
   resize: none;
   border: none;
   outline: none;
   border-bottom-left-radius: 10px;
   box-sizing: border-box;
-  padding: 18px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.33;
@@ -187,15 +186,11 @@ export default {
 }
 
 .sc-user-input--buttons {
-  width: 100px;
-  position: absolute;
-  right: 30px;
+  flex: 25;
+  justify-content: center;
+  padding-right: 20px;
   height: 100%;
   display: flex;
-}
-
-.sc-user-input--button:first-of-type {
-  width: 40px;
 }
 
 .sc-user-input--button {
@@ -209,7 +204,6 @@ export default {
 }
 
 .sc-user-input.active {
-  box-shadow: none;
   background-color: white;
   box-shadow: 0px -5px 20px 0px rgba(150, 165, 190, 0.2);
 }
