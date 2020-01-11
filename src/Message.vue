@@ -89,9 +89,6 @@ export default {
 .sc-message--content {
   width: 100%;
   display: flex;
-  a {
-    color: inherit !important;
-  }
 }
 
 .sc-message--content.sent {

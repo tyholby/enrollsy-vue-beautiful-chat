@@ -45,7 +45,7 @@ export default {
   color: white;
   text-align: center;
 }
-a.chatLink {
+.chatLink {
   color: inherit !important;
 }
 </style>
