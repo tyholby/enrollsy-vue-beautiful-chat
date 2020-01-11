@@ -174,6 +174,7 @@ export default {
 }
 
 @media (max-width: 450px) {
+  /* mobile media query */
   .sc-chat-window {
     width: 100%;
     height: 100%;

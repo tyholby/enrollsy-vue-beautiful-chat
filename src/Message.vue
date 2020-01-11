@@ -115,6 +115,7 @@ export default {
 /*}*/
 
 @media (max-width: 450px) {
+  /* mobile media query */
   .sc-message {
     width: 80%;
   }

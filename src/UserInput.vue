@@ -154,14 +154,12 @@ export default {
   border-bottom-right-radius: 10px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 .sc-user-input--text {
   flex: 75;
   padding: 18px 18px 40px 18px;
   resize: none;
   border: none;
   outline: none;
-  border-bottom-left-radius: 10px;
   box-sizing: border-box;
   font-size: 15px;
   font-weight: 400;
@@ -177,6 +175,14 @@ export default {
   overflow-y: auto;
 }
 @media (max-width: 450px) {
+  /* mobile media query */
+  .sc-user-input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+@media (max-width: 450px) {
+  /* mobile media query */
   .sc-user-input--text {
     /* More room on the bottom to make space for the help chat button */
     padding-bottom: 85px;

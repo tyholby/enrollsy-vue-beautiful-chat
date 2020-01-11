@@ -123,6 +123,7 @@ export default {
 }
 
 @media (max-width: 450px) {
+  /* mobile media query */
   .sc-header {
     border-radius: 0px;
   }
