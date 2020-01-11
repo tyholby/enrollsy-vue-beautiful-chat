@@ -176,6 +176,12 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
 }
+@media (max-width: 450px) {
+  .sc-user-input--text {
+    /* More room on the bottom to make space for the help chat button */
+    padding-bottom: 85px;
+  }
+}
 
 .sc-user-input--text:empty:before {
   content: attr(placeholder);
