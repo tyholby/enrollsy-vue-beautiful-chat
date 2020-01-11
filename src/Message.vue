@@ -89,6 +89,9 @@ export default {
 .sc-message--content {
   width: 100%;
   display: flex;
+  a {
+    color: inherit !important;
+  }
 }
 
 .sc-message--content.sent {
@@ -127,7 +130,7 @@ export default {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
-  -webkit-font-smoothing: subpixel-antialiased
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 .sc-message--content.sent .sc-message--text {
   color: white;
