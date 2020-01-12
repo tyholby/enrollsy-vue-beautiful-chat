@@ -45,7 +45,10 @@ export default {
   color: white;
   text-align: center;
 }
-.chatLink {
-  color: inherit !important;
-}
+</style>
+<style>
+  /* Not scoped so the Autolinker link can get selected */
+  .chatLink {
+    color: inherit !important;
+  }
 </style>
