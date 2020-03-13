@@ -93,9 +93,6 @@ export default {
     defaultChatIcon() {
       return chatIcon
     },
-    undrawMessagingSvg () {
-      return undrawMessaging;
-    },
   },
   mounted () {
     this._scrollDown()
