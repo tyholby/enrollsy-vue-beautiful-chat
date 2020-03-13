@@ -11,7 +11,7 @@
     </template>
     <template v-else-if="!loading && !messages.length">
       <div class="sc-message-list-empty">
-        <img width="130" height="130" src="./assets/undraw-messaging.svg" />
+        <img width="150" height="150" src="./assets/undraw-messaging.svg" />
         <div class="sc-message-list-empty-heading">
           No Messages
         </div>
@@ -110,6 +110,7 @@ export default {
   padding: 40px 0px;
 }
 .sc-message-list-empty {
+  padding: 30px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
