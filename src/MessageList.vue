@@ -29,12 +29,10 @@
 <script>
 import Message from './Message.vue'
 import chatIcon from './assets/chat-icon.svg'
-import undrawMessaging from './assets/undraw-messaging.svg'
 import { ContentLoader } from 'vue-content-loader'
 
 export default {
   components: {
-    UndrawMessagingSVG,
     Message,
     ContentLoader,
   },
