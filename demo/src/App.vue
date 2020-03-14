@@ -18,7 +18,14 @@
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :messageStyling="messageStyling"
       :loading="loading"
-    />
+      use-custom-launcher
+    >
+      <div slot-scope="{ close, open, isOpen }">
+        <button @click="isOpen ? close() : open()">
+          Testing
+        </button>
+      </div>
+    </beautiful-chat>
       <p class="text-center toggle">
         <a v-if="!isChatOpen" :style="{color: linkColor}" href="#" @click.prevent="openChat()">Open the chat window</a>
         <a v-else :style="{color: linkColor}" href="#" @click.prevent="closeChat()">Close the chat window</a>

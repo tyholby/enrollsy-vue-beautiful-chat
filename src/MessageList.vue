@@ -9,6 +9,17 @@
         <rect x="40" y="135" rx="10" ry="10" width="200" height="100" />
       </ContentLoader>
     </template>
+    <template v-else-if="!loading && !messages.length">
+      <div class="sc-message-list-empty">
+        <img width="150" height="150" src="./assets/undraw-messaging.svg" />
+        <div class="sc-message-list-empty-heading">
+          No Messages
+        </div>
+        <div class="sc-message-list-empty-sub-heading">
+          Send your first message below!
+        </div>
+      </div>
+    </template>
     <template v-else>
       <Message v-for="(message, idx) in messages" :message="message" :chatImageUrl="chatImageUrl(message.author)" :authorName="authorName(message.author)" :key="idx" :colors="colors" :messageStyling="messageStyling" />
       <Message v-show="showTypingIndicator !== ''" :message="{author: showTypingIndicator, type: 'typing'}" :chatImageUrl="chatImageUrl(showTypingIndicator)" :colors="colors" :messageStyling="messageStyling" />
@@ -79,7 +90,7 @@ export default {
   computed: {
     defaultChatIcon() {
       return chatIcon
-    }
+    },
   },
   mounted () {
     this._scrollDown()
@@ -97,5 +108,23 @@ export default {
   overflow-y: auto;
   background-size: 100%;
   padding: 40px 0px;
+}
+.sc-message-list-empty {
+  padding: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sc-message-list-empty-heading {
+  margin: 30px 0 0 0;
+  color: #9E9DA2;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sc-message-list-empty-sub-heading {
+  margin: 10px 0 0 0;
+  color: #9E9DA2;
+  font-size: 14px;
 }
 </style>
