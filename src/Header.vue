@@ -5,7 +5,12 @@
       <div class="sc-header--title" @click="toggleUserList"> {{title}} </div>
       <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ numberOfLocations }} location(s)</div>
     </div>
-    <div class="sc-header--close-button" @click="onClose">
+    <div
+      class="sc-header--close-button"
+      @click.stop="onClose"
+      @mousedown.stop=""
+      @touchstart.stop=""
+    >
       <img src="./assets/close-icon.png" alt="" />
     </div>
   </div>
