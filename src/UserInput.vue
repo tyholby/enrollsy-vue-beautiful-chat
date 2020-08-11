@@ -161,7 +161,7 @@ export default {
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.33;
   white-space: pre-wrap;
