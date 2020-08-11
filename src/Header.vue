@@ -4,27 +4,29 @@
     :style="{
       background: colors.header.bg,
       color: colors.header.text,
-      height: mobileWebViewStyles.appBarHeight,
     }"
   >
     <!--<img class="sc-header&#45;&#45;img" :src="imageUrl" alt="" v-if="imageUrl" />-->
     <div
         v-if="isWebView"
+        style="width: 100%;"
         :style="{
           height: hasNotch ? '40px' : '20px',
         }"
     ></div>
-    <div class="sc-header-users-text-container">
-      <div class="sc-header--title" @click="toggleUserList"> {{title}} </div>
-      <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ numberOfLocations }} location(s)</div>
-    </div>
-    <div
-      class="sc-header--close-button"
-      @click.stop="onClose"
-      @mousedown.stop=""
-      @touchstart.stop=""
-    >
-      <img src="./assets/close-icon.png" alt="" />
+    <div style="display: flex; justify-content: space-between;">
+      <div class="sc-header-users-text-container">
+        <div class="sc-header--title" @click="toggleUserList"> {{title}} </div>
+        <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ numberOfLocations }} location(s)</div>
+      </div>
+      <div
+        class="sc-header--close-button"
+        @click.stop="onClose"
+        @mousedown.stop=""
+        @touchstart.stop=""
+      >
+        <img src="./assets/close-icon.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -91,7 +93,7 @@ export default {
   position: relative;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .sc-header--img {
