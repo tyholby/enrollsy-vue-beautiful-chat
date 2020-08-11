@@ -1,6 +1,19 @@
 <template>
-  <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
+  <div
+    class="sc-header"
+    :style="{
+      background: colors.header.bg,
+      color: colors.header.text,
+      height: mobileWebViewStyles.appBarHeight,
+    }"
+  >
     <!--<img class="sc-header&#45;&#45;img" :src="imageUrl" alt="" v-if="imageUrl" />-->
+    <div
+        v-if="isWebView"
+        :style="{
+          height: hasNotch ? '40px' : '20px',
+        }"
+    ></div>
     <div class="sc-header-users-text-container">
       <div class="sc-header--title" @click="toggleUserList"> {{title}} </div>
       <div class="sc-open-drawer-text" @click="openHelpDrawer">Subscribed to {{ numberOfLocations }} location(s)</div>
@@ -37,6 +50,18 @@ export default {
     numberOfLocations: {
       type: Number,
       required: true
+    },
+    mobileWebViewStyles: {
+      type: Object,
+      required: true
+    },
+    isWebView: {
+      type: Boolean,
+      default: false
+    },
+    hasNotch: {
+      type: Boolean,
+      default: false
     },
     colors: {
       type: Object,

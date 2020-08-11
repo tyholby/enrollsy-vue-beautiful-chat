@@ -7,6 +7,9 @@
       :colors="colors"
       :openHelpDrawer="openHelpDrawer"
       :numberOfLocations="numberOfLocations"
+      :mobileWebViewStyles="mobileWebViewStyles"
+      :isWebView="isWebView"
+      :hasNotch="hasNotch"
       @userList="handleUserListToggle"
     />
     <UserList
@@ -83,6 +86,18 @@ export default {
     numberOfLocations: {
       type: Number,
       required: true
+    },
+    mobileWebViewStyles: {
+      type: Object,
+      required: true
+    },
+    isWebView: {
+      type: Boolean,
+      default: false
+    },
+    hasNotch: {
+      type: Boolean,
+      default: false
     },
     messageList: {
       type: Array,

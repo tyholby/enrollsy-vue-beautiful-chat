@@ -26,6 +26,9 @@
       :onClose="close"
       :openHelpDrawer="openHelpDrawer"
       :numberOfLocations="numberOfLocations"
+      :mobileWebViewStyles="mobileWebViewStyles"
+      :isWebView="isWebView"
+      :hasNotch="hasNotch"
       :showEmoji="showEmoji"
       :showFile="showFile"
       :placeholder="placeholder"
@@ -61,6 +64,14 @@ export default {
     numberOfLocations: {
       type: Number,
       required: true
+    },
+    isWebView: {
+      type: Boolean,
+      default: false
+    },
+    hasNotch: {
+      type: Boolean,
+      default: false
     },
     close: {
       type: Function,
@@ -162,6 +173,23 @@ export default {
       type: Boolean,
       default: false
     },
+  },
+  data () {
+    return {
+      mobileWebViewStyles: {
+        appBarHeight: 58,
+        buttonBottom: '0',
+      },
+    };
+  },
+  created () {
+    if (this.hasNotch && this.isWebView) {
+      this.mobileWebViewStyles.appBarHeight = 90;
+      this.mobileWebViewStyles.buttonBottom = '-35px';
+    } else if (!this.hasNotch && this.isWebView) {
+      this.mobileWebViewStyles.appBarHeight = 65;
+      this.mobileWebViewStyles.buttonBottom = '-10px';
+    }
   },
   computed: {
     chatWindowTitle() {
